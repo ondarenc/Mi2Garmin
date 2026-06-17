@@ -62,25 +62,42 @@
   animation: none;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   padding: 0;
   margin: 0;
 }
-.freeBox__yVdPf {
-  animation: none;
+.headerMenu {
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
   width: 100%;
-  max-width: 1463px;
-  align-self: flex-end;
-  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
+  height: auto;
+  max-width: 100%;
   min-width: 0;
-  padding: 20px 20px 20px 0px;
-  margin: 0;
+  padding: 8px 8px 147px;
 }
-.freeBox___0WQmg {
+.text__nMBfq {
+  animation: none;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-family: "Inter", sans-serif;
+  color: var(--token-6JOeFAOmoPn8);
+}
+.text__gx4FK {
+  animation: none;
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-family: "Inter", sans-serif;
+  color: var(--token-6JOeFAOmoPn8);
+  margin-left: 26px;
+}
+.bigBoxConverter {
   animation: none;
   display: flex;
   flex-direction: column;
@@ -88,6 +105,8 @@
   box-shadow: 0 20px 60px 0px rgba(0, 0, 0, 0.3);
   max-width: 600px;
   width: 100%;
+  align-items: center;
+  justify-content: center;
   border-radius: 16px;
   padding: 40px;
   margin: 0 30px 0 0px;
@@ -142,7 +161,7 @@
   text-decoration-line: none;
   text-overflow: clip;
   padding: 0;
-  margin: 0 0 8px;
+  margin: 0 0 8px 54px;
 }
 .h3___6Tr {
   animation: none;
@@ -164,12 +183,15 @@
 }
 .p {
   animation: none;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
   color: #718096;
   font-size: 16px;
   font-family: "-apple-system";
   font-weight: 400;
   font-style: normal;
-  text-align: center;
+  text-align: left;
   text-transform: none;
   line-height: 1.5;
   letter-spacing: normal;
@@ -177,8 +199,20 @@
   user-select: text;
   text-decoration-line: none;
   text-overflow: clip;
-  padding: 0;
   margin: 0;
+}
+.ol {
+  display: flex;
+  flex-direction: column;
+}
+.li__mT8ZS {
+  text-align: left;
+  color: #000000;
+  font-family: "Inter Tight", sans-serif;
+}
+.li__lObdL {
+  font-family: "Inter Tight", sans-serif;
+  color: #000000;
 }
 .freeBox__cbxY {
   animation: none;
@@ -416,101 +450,6 @@
   font-weight: 400;
   font-style: normal;
   text-align: left;
-  text-transform: none;
-  line-height: 1.8;
-  letter-spacing: normal;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none;
-  text-overflow: clip;
-  color: #4a5568;
-}
-.freeBox___6O2M4 {
-  animation: none;
-  display: flex;
-  flex-direction: column;
-  background: white;
-  box-shadow: 0 20px 60px 0px rgba(0, 0, 0, 0.3);
-  max-width: 800px;
-  width: 45%;
-  border-radius: 16px;
-  padding: 33px 10px 40px 12px;
-  margin: 0 0px 0 30px;
-}
-.freeBox__mD4Fw {
-  animation: none;
-  display: flex;
-  flex-direction: column;
-  row-gap: 16px;
-  column-gap: 16px;
-  padding: 0;
-  margin: 0 0 24px;
-}
-.freeBox__eOnuT {
-  animation: none;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding: 0;
-  margin: 0;
-}
-.textbox {
-  animation: none;
-  display: none;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-}
-.freeBox___5G8QP {
-  animation: none;
-  display: flex;
-  flex-direction: column;
-  background: #f7fafc;
-  border-radius: 8px;
-  padding: 0px 24px 24px;
-  margin: 0px 0 0;
-}
-.h3__cn2PO {
-  animation: none;
-  color: #2d3748;
-  font-size: 18px;
-  font-family: "-apple-system";
-  font-weight: 600;
-  font-style: normal;
-  text-align: left;
-  text-transform: none;
-  line-height: 1.2;
-  letter-spacing: normal;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none;
-  text-overflow: clip;
-  padding: 29px 0 0;
-  margin: 0px 0 16px;
-}
-.freeBox___4VedD {
-  animation: none;
-  display: flex;
-  flex-direction: column;
-  color: #4a5568;
-  line-height: 1.8;
-  padding: 0 0 0 24px;
-  margin: 0;
-}
-.freeBox___8EHw {
-  animation: none;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0 0 8px;
-}
-.span__sVfMv {
-  animation: none;
-  text-align: justify;
-  font-family: "-apple-system";
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
   text-transform: none;
   line-height: 1.8;
   letter-spacing: normal;

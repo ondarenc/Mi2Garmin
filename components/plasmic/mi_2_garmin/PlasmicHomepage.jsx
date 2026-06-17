@@ -43,9 +43,13 @@ function wrapQueriesWithLoadingProxy($q) {
 
 export function generateDynamicMetadata($q, $ctx) {
   return {
-    openGraph: {},
+    title: "Homepage",
+    openGraph: {
+      title: "Homepage"
+    },
     twitter: {
-      card: "summary"
+      card: "summary",
+      title: "Homepage"
     }
   };
 }
@@ -81,12 +85,6 @@ function PlasmicHomepage__RenderFunc(props) {
     () => [
       {
         path: "textbox2.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined
-      },
-      {
-        path: "textbox.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined
@@ -129,129 +127,210 @@ function PlasmicHomepage__RenderFunc(props) {
               }}
             >
               <div className={classNames("all", sty.freeBox__tm4E)} id={"root"}>
-                <div className={classNames("all", sty.freeBox__yVdPf)}>
-                  <div className={classNames("all", sty.freeBox___0WQmg)}>
-                    <div className={classNames("all", sty.freeBox__zlkAx)}>
-                      <div className={classNames("all", sty.freeBox__rzj5J)}>
-                        <IconIcon
-                          className={classNames("all", sty.svg__cnwIs)}
-                          role={"img"}
-                        />
+                <div
+                  data-plasmic-name={"headerMenu"}
+                  data-plasmic-override={overrides.headerMenu}
+                  className={classNames("all", sty.headerMenu)}
+                >
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__nMBfq)}
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["goToHomepage"] = true
+                        ? (() => {
+                            const actionArgs = { destination: `/` };
+                            return (({ destination }) => {
+                              if (
+                                typeof destination === "string" &&
+                                destination.startsWith("#")
+                              ) {
+                                document
+                                  .getElementById(destination.substr(1))
+                                  .scrollIntoView({ behavior: "smooth" });
+                              } else {
+                                location.assign(destination);
+                              }
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["goToHomepage"] != null &&
+                        typeof $steps["goToHomepage"] === "object" &&
+                        typeof $steps["goToHomepage"].then === "function"
+                      ) {
+                        $steps["goToHomepage"] = await $steps["goToHomepage"];
+                      }
+                    }}
+                  >
+                    {"Homepage"}
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__gx4FK)}
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["goToAbout"] = true
+                        ? (() => {
+                            const actionArgs = { destination: `/About` };
+                            return (({ destination }) => {
+                              if (
+                                typeof destination === "string" &&
+                                destination.startsWith("#")
+                              ) {
+                                document
+                                  .getElementById(destination.substr(1))
+                                  .scrollIntoView({ behavior: "smooth" });
+                              } else {
+                                location.assign(destination);
+                              }
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["goToAbout"] != null &&
+                        typeof $steps["goToAbout"] === "object" &&
+                        typeof $steps["goToAbout"].then === "function"
+                      ) {
+                        $steps["goToAbout"] = await $steps["goToAbout"];
+                      }
+                    }}
+                  >
+                    {"About"}
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"bigBoxConverter"}
+                  data-plasmic-override={overrides.bigBoxConverter}
+                  className={classNames("all", sty.bigBoxConverter)}
+                >
+                  <div className={classNames("all", sty.freeBox__zlkAx)}>
+                    <div className={classNames("all", sty.freeBox__rzj5J)}>
+                      <IconIcon
+                        className={classNames("all", sty.svg__cnwIs)}
+                        role={"img"}
+                      />
 
-                        <h1
-                          data-plasmic-name={"h1"}
-                          data-plasmic-override={overrides.h1}
-                          className={classNames(
-                            "all",
-                            "h1",
-                            "h1__4eBza",
-                            "__wab_text",
-                            sty.h1
-                          )}
-                        >
-                          {"Mi Fitness to Garmin Converter"}
-                        </h1>
-                      </div>
-                      <h3
+                      <h1
+                        data-plasmic-name={"h1"}
+                        data-plasmic-override={overrides.h1}
                         className={classNames(
                           "all",
-                          "h3",
-                          "h3__4eBza",
+                          "h1",
+                          "h1__4eBza",
                           "__wab_text",
-                          sty.h3___6Tr
+                          sty.h1
                         )}
                       >
-                        {"Prerequisites"}
-                      </h3>
-                      <p
-                        data-plasmic-name={"p"}
-                        data-plasmic-override={overrides.p}
-                        className={classNames(
-                          "all",
-                          "p",
-                          "p__4eBza",
-                          "__wab_text",
-                          sty.p
-                        )}
-                      >
-                        {
-                          "You already request Xiaomi a download of your fitness history by logging into your Xiaomi cloud account via a web browser.\n\nYou already have you located the file tht contains the links (usally named \u00abXXXXXX_sport_track_data.csv\u00bb"
-                        }
-                      </p>
+                        {"Mi Fitness to Garmin Converter"}
+                      </h1>
                     </div>
-                    <div className={classNames("all", sty.freeBox__cbxY)}>
-                      <div className={classNames("all", sty.freeBox__h5ZhD)}>
-                        <input
-                          data-plasmic-name={"textbox2"}
-                          data-plasmic-override={overrides.textbox2}
-                          accept={".csv"}
-                          className={classNames(
-                            "all",
-                            "input",
-                            "input__4eBza",
-                            sty.textbox2
-                          )}
-                          id={"file-input"}
-                          onChange={async (...eventArgs) => {
-                            (e => {
-                              generateStateOnChangeProp($state, [
-                                "textbox2",
-                                "value"
-                              ])(e.target.value);
-                            }).apply(null, eventArgs);
-                          }}
-                          ref={ref => {
-                            $refs["textbox2"] = ref;
-                          }}
-                          type={"file"}
-                          value={
-                            generateStateValueProp($state, [
-                              "textbox2",
-                              "value"
-                            ]) ?? ""
-                          }
-                        />
-
-                        <label
-                          data-plasmic-name={"label"}
-                          data-plasmic-override={overrides.label}
-                          className={classNames("all", sty.label)}
-                          for={"file-input"}
-                        >
-                          <Icon2Icon
-                            className={classNames("all", sty.svg__fYcDf)}
-                            role={"img"}
-                          />
-
-                          <span
+                    <h3
+                      className={classNames(
+                        "all",
+                        "h3",
+                        "h3__4eBza",
+                        "__wab_text",
+                        sty.h3___6Tr
+                      )}
+                    >
+                      {"Prerequisites"}
+                    </h3>
+                    <p
+                      data-plasmic-name={"p"}
+                      data-plasmic-override={overrides.p}
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__4eBza",
+                        "__wab_text",
+                        sty.p
+                      )}
+                    >
+                      <React.Fragment>
+                        <React.Fragment>{""}</React.Fragment>
+                        {
+                          <ol
+                            data-plasmic-name={"ol"}
+                            data-plasmic-override={overrides.ol}
                             className={classNames(
                               "all",
-                              "span",
-                              "span__4eBza",
-                              "__wab_text",
-                              sty.span__pxh5T
+                              "ol",
+                              "ol__4eBza",
+                              sty.ol
                             )}
-                            style={{ textOverflow: "ellipsis" }}
                           >
-                            {
-                              "20260612_6779095247_MiFitness_hlth_center_sport_track_data.csv"
-                            }
-                          </span>
-                        </label>
-                      </div>
-                      <button
-                        data-plasmic-name={"button"}
-                        data-plasmic-override={overrides.button}
+                            <li
+                              className={classNames(
+                                "all",
+                                "li",
+                                "li__4eBza",
+                                "__wab_text",
+                                sty.li__mT8ZS
+                              )}
+                            >
+                              {
+                                "You  requested Xiaomi a download of your fitness history by logging into your Xiaomi cloud account via a web browser."
+                              }
+                            </li>
+                            <li
+                              className={classNames(
+                                "all",
+                                "li",
+                                "li__4eBza",
+                                "__wab_text",
+                                sty.li__lObdL
+                              )}
+                            >
+                              {
+                                "You already have you located the file tht contains the links (usally named \u00abXXXXXX_sport_track_data.csv\u00bb"
+                              }
+                            </li>
+                          </ol>
+                        }
+                        <React.Fragment>{""}</React.Fragment>
+                      </React.Fragment>
+                    </p>
+                  </div>
+                  <div className={classNames("all", sty.freeBox__cbxY)}>
+                    <div className={classNames("all", sty.freeBox__h5ZhD)}>
+                      <input
+                        data-plasmic-name={"textbox2"}
+                        data-plasmic-override={overrides.textbox2}
+                        accept={".csv"}
                         className={classNames(
                           "all",
-                          "button",
-                          "button__4eBza",
-                          sty.button
+                          "input",
+                          "input__4eBza",
+                          sty.textbox2
                         )}
-                        disabled={""}
+                        id={"file-input"}
+                        onChange={async (...eventArgs) => {
+                          (e => {
+                            generateStateOnChangeProp($state, [
+                              "textbox2",
+                              "value"
+                            ])(e.target.value);
+                          }).apply(null, eventArgs);
+                        }}
+                        ref={ref => {
+                          $refs["textbox2"] = ref;
+                        }}
+                        type={"file"}
+                        value={
+                          generateStateValueProp($state, [
+                            "textbox2",
+                            "value"
+                          ]) ?? ""
+                        }
+                      />
+
+                      <label
+                        data-plasmic-name={"label"}
+                        data-plasmic-override={overrides.label}
+                        className={classNames("all", sty.label)}
+                        for={"file-input"}
                       >
-                        <Icon3Icon
-                          className={classNames("all", sty.svg___7FY)}
+                        <Icon2Icon
+                          className={classNames("all", sty.svg__fYcDf)}
                           role={"img"}
                         />
 
@@ -261,152 +340,117 @@ function PlasmicHomepage__RenderFunc(props) {
                             "span",
                             "span__4eBza",
                             "__wab_text",
-                            sty.span___2RW6M
+                            sty.span__pxh5T
                           )}
+                          style={{ textOverflow: "ellipsis" }}
                         >
-                          {"Processing..."}
+                          {
+                            "20260612_6779095247_MiFitness_hlth_center_sport_track_data.csv"
+                          }
                         </span>
-                      </button>
+                      </label>
                     </div>
-                    <div className={classNames("all", sty.freeBox__djgIo)}>
-                      <h3
+                    <button
+                      data-plasmic-name={"button"}
+                      data-plasmic-override={overrides.button}
+                      className={classNames(
+                        "all",
+                        "button",
+                        "button__4eBza",
+                        sty.button
+                      )}
+                      disabled={""}
+                    >
+                      <Icon3Icon
+                        className={classNames("all", sty.svg___7FY)}
+                        role={"img"}
+                      />
+
+                      <span
                         className={classNames(
                           "all",
-                          "h3",
-                          "h3__4eBza",
+                          "span",
+                          "span__4eBza",
                           "__wab_text",
-                          sty.h3__dI9X
+                          sty.span___2RW6M
                         )}
                       >
-                        {"Instructions:"}
-                      </h3>
-                      <div className={classNames("all", sty.freeBox__t6Wab)}>
-                        <div className={classNames("all", sty.freeBox__lj5Wc)}>
-                          <span
-                            className={classNames(
-                              "all",
-                              "span",
-                              "span__4eBza",
-                              "__wab_text",
-                              sty.span__aflEm
-                            )}
-                          >
-                            {
-                              "Upload a CSV file containing GPX file URLs in the 'GPX' column"
-                            }
-                          </span>
-                        </div>
-                        <div className={classNames("all", sty.freeBox__pwoda)}>
-                          <span
-                            className={classNames(
-                              "all",
-                              "span",
-                              "span__4eBza",
-                              "__wab_text",
-                              sty.span___2VyNc
-                            )}
-                          >
-                            {
-                              "The system will automatically download all GPX files"
-                            }
-                          </span>
-                        </div>
-                        <div className={classNames("all", sty.freeBox__mn8Ut)}>
-                          <span
-                            className={classNames(
-                              "all",
-                              "span",
-                              "span__4eBza",
-                              "__wab_text",
-                              sty.span___6BkYq
-                            )}
-                          >
-                            {
-                              "Each file is converted to Garmin-compatible format with continuous timestamps"
-                            }
-                          </span>
-                        </div>
-                        <div className={classNames("all", sty.freeBox__ly9Ge)}>
-                          <span
-                            className={classNames(
-                              "all",
-                              "span",
-                              "span__4eBza",
-                              "__wab_text",
-                              sty.span___0U8Qz
-                            )}
-                          >
-                            {
-                              "Download the ZIP file containing all converted GPX files"
-                            }
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                        {"Processing..."}
+                      </span>
+                    </button>
                   </div>
-                  <div className={classNames("all", sty.freeBox___6O2M4)}>
-                    <div className={classNames("all", sty.freeBox__mD4Fw)}>
-                      <div className={classNames("all", sty.freeBox__eOnuT)}>
-                        <input
-                          data-plasmic-name={"textbox"}
-                          data-plasmic-override={overrides.textbox}
-                          accept={".csv"}
+                  <div className={classNames("all", sty.freeBox__djgIo)}>
+                    <h3
+                      className={classNames(
+                        "all",
+                        "h3",
+                        "h3__4eBza",
+                        "__wab_text",
+                        sty.h3__dI9X
+                      )}
+                    >
+                      {"Instructions:"}
+                    </h3>
+                    <div className={classNames("all", sty.freeBox__t6Wab)}>
+                      <div className={classNames("all", sty.freeBox__lj5Wc)}>
+                        <span
                           className={classNames(
                             "all",
-                            "input",
-                            "input__4eBza",
-                            sty.textbox
+                            "span",
+                            "span__4eBza",
+                            "__wab_text",
+                            sty.span__aflEm
                           )}
-                          id={"file-input"}
-                          onChange={async (...eventArgs) => {
-                            (e => {
-                              generateStateOnChangeProp($state, [
-                                "textbox",
-                                "value"
-                              ])(e.target.value);
-                            }).apply(null, eventArgs);
-                          }}
-                          ref={ref => {
-                            $refs["textbox"] = ref;
-                          }}
-                          type={"file"}
-                          value={
-                            generateStateValueProp($state, [
-                              "textbox",
-                              "value"
-                            ]) ?? ""
+                        >
+                          {
+                            "Upload a CSV file containing GPX file URLs in the 'GPX' column"
                           }
-                        />
+                        </span>
                       </div>
-                    </div>
-                    <div className={classNames("all", sty.freeBox___5G8QP)}>
-                      <h3
-                        className={classNames(
-                          "all",
-                          "h3",
-                          "h3__4eBza",
-                          "__wab_text",
-                          sty.h3__cn2PO
-                        )}
-                      >
-                        {"Why this application?"}
-                      </h3>
-                      <div className={classNames("all", sty.freeBox___4VedD)}>
-                        <div className={classNames("all", sty.freeBox___8EHw)}>
-                          <span
-                            className={classNames(
-                              "all",
-                              "span",
-                              "span__4eBza",
-                              "__wab_text",
-                              sty.span__sVfMv
-                            )}
-                          >
-                            {
-                              "My wyfe had a Mi Smartband and tracked her activitys there. Then she switched to Garmin and wanted to transfer her workloads there.\nThe first step is to as Xiaomi to send you data history that you download in CSV format.\n\nThe problem: this format is not compatoble with Garmin and all the solutions found in the market, sync apps or anything that could transfert to Garmin is not semaless or just not possibe.\n\nBut, into the CSV Mi files, there is one, usually named  \u00abXXXXXX_sport_track_data\u00bb that contains the links to every activity in GPX format. Two problems here:\n\n- Find every link and download manually could be veeeeeery long\n- And finally the PGX format is not accepted by Garmin because the timestamp is not the right one\n\nSo, I decided to create this app than can track the CSV file, download every GPX, convert it to Garmin compatible and finally download a ZIP file with all the workloads. And bingo, you can now import them to Garmin Connect."
-                            }
-                          </span>
-                        </div>
+                      <div className={classNames("all", sty.freeBox__pwoda)}>
+                        <span
+                          className={classNames(
+                            "all",
+                            "span",
+                            "span__4eBza",
+                            "__wab_text",
+                            sty.span___2VyNc
+                          )}
+                        >
+                          {
+                            "The system will automatically download all GPX files"
+                          }
+                        </span>
+                      </div>
+                      <div className={classNames("all", sty.freeBox__mn8Ut)}>
+                        <span
+                          className={classNames(
+                            "all",
+                            "span",
+                            "span__4eBza",
+                            "__wab_text",
+                            sty.span___6BkYq
+                          )}
+                        >
+                          {
+                            "Each file is converted to Garmin-compatible format with continuous timestamps"
+                          }
+                        </span>
+                      </div>
+                      <div className={classNames("all", sty.freeBox__ly9Ge)}>
+                        <span
+                          className={classNames(
+                            "all",
+                            "span",
+                            "span__4eBza",
+                            "__wab_text",
+                            sty.span___0U8Qz
+                          )}
+                        >
+                          {
+                            "Download the ZIP file containing all converted GPX files"
+                          }
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -421,13 +465,35 @@ function PlasmicHomepage__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "h1", "p", "textbox2", "label", "button", "textbox"],
+  root: [
+    "root",
+    "headerMenu",
+    "bigBoxConverter",
+    "h1",
+    "p",
+    "ol",
+    "textbox2",
+    "label",
+    "button"
+  ],
+
+  headerMenu: ["headerMenu"],
+  bigBoxConverter: [
+    "bigBoxConverter",
+    "h1",
+    "p",
+    "ol",
+    "textbox2",
+    "label",
+    "button"
+  ],
+
   h1: ["h1"],
-  p: ["p"],
+  p: ["p", "ol"],
+  ol: ["ol"],
   textbox2: ["textbox2"],
   label: ["label"],
-  button: ["button"],
-  textbox: ["textbox"]
+  button: ["button"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -462,12 +528,14 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    headerMenu: makeNodeComponent("headerMenu"),
+    bigBoxConverter: makeNodeComponent("bigBoxConverter"),
     h1: makeNodeComponent("h1"),
     p: makeNodeComponent("p"),
+    ol: makeNodeComponent("ol"),
     textbox2: makeNodeComponent("textbox2"),
     label: makeNodeComponent("label"),
     button: makeNodeComponent("button"),
-    textbox: makeNodeComponent("textbox"),
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
     internalArgProps: PlasmicHomepage__ArgProps,

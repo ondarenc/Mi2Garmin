@@ -12,6 +12,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #f9fafb;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#root {
+  width: 100%;
+  max-width: 1200px;
 }
 
 .App {
