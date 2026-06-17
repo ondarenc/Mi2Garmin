@@ -1,0 +1,94 @@
+{
+  "platform": "react",
+  "code": {
+    "lang": "js",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+  },
+  "images": {
+    "scheme": "inlined",
+    "publicDir": "../public",
+    "publicUrlPrefix": "/static/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "./components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "4eBzadHir4BZ57wPgA7u3b",
+      "projectApiToken": "ubsHcxE7rIIbcv9209fIAC3Zoc9WOjBdPh5WK0ZmldO05IxpGbDJgqwJnK1pdSPxkT0eQ6vsLW7G3NYukQ",
+      "projectName": "Mi2Garmin",
+      "version": "latest",
+      "cssFilePath": "plasmic/mi_2_garmin/plasmic.css",
+      "components": [
+        {
+          "id": "GhJMU-T7IzVZ",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "4eBzadHir4BZ57wPgA7u3b",
+          "renderModuleFilePath": "plasmic/mi_2_garmin/PlasmicHomepage.jsx",
+          "importSpec": {
+            "modulePath": "Homepage.jsx"
+          },
+          "cssFilePath": "plasmic/mi_2_garmin/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/"
+        }
+      ],
+      "icons": [
+        {
+          "id": "o7rlW8Y_KTEE",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/mi_2_garmin/icons/PlasmicIcon__Icon.jsx"
+        },
+        {
+          "id": "xbRmki_yIZ9b",
+          "name": "Icon2Icon",
+          "moduleFilePath": "plasmic/mi_2_garmin/icons/PlasmicIcon__Icon2.jsx"
+        },
+        {
+          "id": "6iJiX8DtBr4_",
+          "name": "Icon3Icon",
+          "moduleFilePath": "plasmic/mi_2_garmin/icons/PlasmicIcon__Icon3.jsx"
+        }
+      ],
+      "images": [],
+      "indirect": false,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/mi_2_garmin/PlasmicStyleTokensProvider.jsx",
+      "dataTokensFilePath": "",
+      "projectModuleFilePath": "plasmic/mi_2_garmin/plasmic.jsx",
+      "codeComponents": [
+        {
+          "id": "_YIofs4OUELu",
+          "name": "PlasmicHead",
+          "displayName": "hostless-plasmic-head",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "x8ejrpgn3gc_",
+          "name": "Fetcher",
+          "displayName": "plasmic-data-source-fetcher",
+          "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ],
+      "customFunctions": []
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": []
+  },
+  "wrapPagesWithGlobalContexts": true,
+  "preserveJsImportExtensions": false,
+  "cliVersion": "0.1.364",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.364/dist/plasmic.schema.json"
+}

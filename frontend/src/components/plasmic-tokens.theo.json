@@ -1,0 +1,19 @@
+{
+  "props": [
+    {
+      "name": "Neutral/Neutral-Foreground",
+      "type": "color",
+      "value": "#F9FAFB",
+      "category": "color",
+      "meta": {
+        "projectId": "4eBzadHir4BZ57wPgA7u3b",
+        "id": "GW5MUPqK9e6y"
+      }
+    }
+  ],
+  "global": {
+    "meta": {
+      "source": "plasmic.app"
+    }
+  }
+}
