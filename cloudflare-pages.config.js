@@ -1,7 +1,7 @@
 module.exports = {
-  buildCommand: 'cd frontend && npm ci && npm run build',
-  outputDirectory: 'frontend/build',
+  buildCommand: 'npm ci && npm run build',
+  outputDirectory: 'build',
   nodeVersion: '18',
   environment: 'production',
-  installCommand: 'cd frontend && npm ci'
+  installCommand: 'npm ci'
 };
