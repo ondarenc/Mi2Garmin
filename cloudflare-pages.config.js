@@ -1,7 +1,7 @@
 module.exports = {
-  buildCommand: 'npm ci && npm run build',
+  buildCommand: 'npm install && npm run build',
   outputDirectory: 'build',
-  nodeVersion: '18',
+  nodeVersion: '20',
   environment: 'production',
-  installCommand: 'npm ci'
+  installCommand: 'npm install'
 };
